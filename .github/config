@@ -21,15 +21,19 @@ sed -i '$d' target/linux/armvirt/image/Makefile
 echo -e 'define Device/Phicomm-n1
 DEVICE_MODEL := Phicomm-n1
   DEVICE_PACKAGES := \
+    brcmfmac-firmware-43430-sdio \
+    brcmfmac-firmware-43430-sdio-rpi-3b \
+    brcmfmac-firmware-43455-sdio \
+    brcmfmac-firmware-43455-sdio-rpi-3b-plus \
     kmod-brcmfmac kmod-brcmutil kmod-cfg80211 kmod-mac80211 wpa-cli wpad-basic\
     kmod-fs-ext4 kmod-fs-vfat kmod-fs-exfat libzstd \
     kmod-usb-storage kmod-usb-storage-extras kmod-usb-storage-uas \
     kmod-usb-net kmod-usb-net-asix-ax88179 kmod-usb-net-rtl8150 kmod-usb-net-rtl8152 \
     libattr  cfdisk  resize2fs tune2fs pv unzip \
     lscpu htop iperf3 curl lm-sensors \
-    perl perlbase-base perlbase-unicode perlbase-utf8 \
+	perl perlbase-base perlbase-unicode perlbase-utf8 \
     blkid fdisk lsblk parted \
-    attr btrfs-progs chattr dosfstools e2fsprogs f2fs-tools f2fsck lsattr mkf2fs xfs-fsck xfs-mkfs \
+	attr btrfs-progs chattr dosfstools e2fsprogs f2fs-tools f2fsck lsattr mkf2fs xfs-fsck xfs-mkfs \
     bash gawk getopt losetup tar uuidgen bash bzip2 vim
 endef
 ifeq ($(SUBTARGET),64)
