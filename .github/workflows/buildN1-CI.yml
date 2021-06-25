@@ -9,7 +9,7 @@ on:
       - master
     paths:
       - '.github/n1.config'
-      - '.github/config2'
+      - '.github/config1'
       - '.github/workflows/buildN1-CI.yml'
   schedule:
     - cron: 0 8 * * 5
